@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+	<title>Bitcoin Accounting System</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Óscar Andreu Martínez">
+    
+    <link href="assets/css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet" media="screen">   
+	
+	<link href="app/css/app.css" rel="stylesheet" media="screen">
+</head>
+
+<body  style="height:100%; background-image:url(img/background.png);">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="red brand vt-p" href="http://www.applialab.com">OverBitcoin</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="#" class="vt-p">Home</a>
+              </li>
+              <li class="">
+                <a href="#" class="vt-p">Get started</a>
+              </li>
+              <li class="">
+                <a href="#/users" class="vt-p">Users</a>
+              </li>
+              <li class="">
+                <a href="#" class="vt-p">Wallets</a>
+              </li>             
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#/signup">Sign Up</a></li>
+                <li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+					<div id="mainLoginPanel" class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+						<form method="post" action="login" accept-charset="UTF-8">
+							<input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+							<input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+							<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+							<label class="string optional" for="user_remember_me"> Remember me</label>
+							<input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
+							<label style="text-align:center;margin-top:5px">or</label>
+						                         <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
+							<input class="btn btn-primary btn-block" type="button" id="sign-in-openid" value="Sign In with OpenID">
+						</form>
+					</div>
+				</li>
+			</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div ng-view class="container-fluid" ></div>
+	
+	<div id="footer-fluid">
+		<div class="container">
+			<p class="muted credit">World developed by <ahref="http://applialab.com">Applialab</a>
+		</div>
+    </div>
+    
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/bootstrap-tooltip.js"></script>
+	<script src="assets/js/bootstrap-transition.js"></script>
+	<script src="assets/js/bootstrap-alert.js"></script>
+	<script src="assets/js/bootstrap-modal.js"></script>
+	<script src="assets/js/bootstrap-dropdown.js"></script>
+	<script src="assets/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/js/bootstrap-tab.js"></script>
+	<script src="assets/js/bootstrap-popover.js"></script>
+	<script src="assets/js/bootstrap-button.js"></script>
+	<script src="assets/js/bootstrap-collapse.js"></script>
+	<script src="assets/js/bootstrap-carousel.js"></script>
+	<script src="assets/js/bootstrap-typeahead.js"></script>
+	<script src="assets/js/moment.min.js"></script>
+	
+	<script src="app/js/App.js"></script>
+	<script src="app/js/MainCtrl.js"></script>
+	<script src="app/js/UsersCtrl.js"></script>
+	<script src="app/js/UserDetailsCtrl.js"></script>
+	<script src="app/js/SignUpCtrl.js"></script>
+</body>
+</html>
